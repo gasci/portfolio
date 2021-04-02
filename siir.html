@@ -40,11 +40,25 @@
         body {
             margin: 2rem;
         }
-
-        .card{
+        
+        .card {
             margin-bottom: 20px !important;
         }
-
+        
+        .card-body {
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        
+        .card-body:hover {
+            text-shadow: 0 0 0px rgba(0, 0, 0, 0.7);
+        }
+        
+        .card-title {
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
         /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
         
         @media (min-width: 768px) {
@@ -91,11 +105,12 @@
     <div class="container ">
 
         <h3 class="mb-4"><u>DALGALARA YAZILMIŞ ŞİİRLER</u>&nbsp;<i class="fas fa-edit text-warning"></i></h3>
+        <p>Sisi kaldırmak için herhangi bir şiirin üzerine gel:</p>
         <div class="card-columns">
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">SIFIR</h4>
+                    <p class="card-title">SIFIR</p>
                     <p class="card-text">
                         kötü biri değildi, kızmazdı <br> ama ne akıl verirdi, ne de iyi biri'ydi <br> zarar vermez, görmez ya da dinlemezdi <br> çünkü varlığı ile yokluğu bir'di <br>
                     </p>
@@ -104,7 +119,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">SÖYLESEN</h4>
+                    <p class="card-title">SÖYLESEN</p>
                     <p class="card-text">tutuşsun kelimeler yanmadan,<br> üşürken ayaklarımız<br> ıslak bir sokakta<br>
                         <br> ikimizin bildiği, sır olmaktan çıkarmış,<br> boşver, tek kişiyiz dedim yağmurlara<br> sen, ılıt kulağımı şarkılarınla<br>
                         <br> dinledikçe alevlenirse gözlerim,<br> umursama,
@@ -115,7 +130,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">İSTANBUL</h4>
+                    <p class="card-title">İSTANBUL</p>
                     <p class="card-text">eski bir hikâyeymiş İstanbul<br> zaman durmuş köprülerinde<br> denizlerine dökülmüş sevgiler<br>
                         <br> eski bir hikâyeymiş İstanbul<br> harfleri silinmiş, sonu eksilmiş<br> okumuşlar ama bitirmemişler
                         <br>
@@ -127,7 +142,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">TUTULMA</h4>
+                    <p class="card-title">TUTULMA</p>
                     <p class="card-text">
                         bir şey diyecektim,<br> iki şey söyledim.<br> bir, iki daha üç oldu<br> anlatması güç oldu.<br>
                     </p>
@@ -136,7 +151,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">YAĞMURUN GÖZLERİ</h4>
+                    <p class="card-title">YAĞMURUN GÖZLERİ</p>
                     <p class="card-text">
                         yağmurun gözlerine baktım,<br> ağladıkça yeryüzüne aktım.<br>
                         <br> düşerken kendimle yarıştım,<br> sonunda sonsuza karıştım.<br>
@@ -149,7 +164,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">KAĞIT KESİĞİ</h4>
+                    <p class="card-title">KAĞIT KESİĞİ</p>
                     <p class="card-text">
                         Defterlerden ordu kurdu<br> çiçeğin gülüşü<br> böceğin yürüyüşü<br>
                         <br> Sayfalara doldu<br> ağacın yaprakları,<br> akken
@@ -164,7 +179,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">CÜMLE</h4>
+                    <p class="card-title">CÜMLE</p>
                     <p class="card-text">
                         Bir cümle kurdum,<br> yüklemi değil,<br> öznesi devrilmiş<br>
                         <br> sözde yüklemler<br> yükledim
@@ -178,7 +193,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">BOYUNDAN BÜYÜK</h4>
+                    <p class="card-title">BOYUNDAN BÜYÜK</p>
                     <p class="card-text">
                         bir yerde<br> bir söz söyledim.<br> çoğaldı beynimde,<br> kulaklarımdan taştı.<br>
                         <br> bir idi bin oldu,<br> dört yanımı doldurdu.<br> başkalaştı, yolundan şaştı,<br> bir gün boyunu aştı.<br>
@@ -189,7 +204,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">MATEMATİK</h4>
+                    <p class="card-title">MATEMATİK</p>
                     <p class="card-text">
                         Kelime çarpı kelime<br> eşittir
                         <br> karmaşık kelime.<br>
@@ -200,7 +215,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">KIZ</h4>
+                    <p class="card-title">KIZ</p>
                     <p class="card-text">
                         kızamıyorum
                         <br> mavi gözlerine,<br> sana kızmak<br> haksızlık olur<br>
@@ -214,7 +229,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">KIRGINLIK</h4>
+                    <p class="card-title">KIRGINLIK</p>
                     <p class="card-text">
                         yine koyu bir akşam,<br> açmıştı yediklerim dilimi.<br> lüzumu var mıydı onca<br> gürültünün, şamatanın.<br>
                         <br> ne vardı yemişsem,<br> birkaç fazladan karpuz dilimi.<br> vakti miydi o kadar<br> kokunun, tatsızlığın.<br>
@@ -226,7 +241,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">DOĞUM</h4>
+                    <p class="card-title">DOĞUM</p>
                     <p class="card-text">
                         büy<br> büyü
                         <br> büyüy
@@ -242,7 +257,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">KAYIP I</h4>
+                    <p class="card-title">KAYIP I</p>
                     <p class="card-text">
 
                         seçmek zorundasın<br> çünkü zordur seçmeler,<br> seçtin mi kaybolursun<br> sen bir,<br> seçenekler birer birer.<br>
@@ -253,7 +268,7 @@
 
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title">KAYIP II</h4>
+                    <p class="card-title">KAYIP II</p>
                     <p class="card-text">
 
                         seçmek zorundasın<br> çünkü sendir seçmeler,<br> seçmezsen kaybolursun<br> sen bir,<br> gelecekler birer birer.<br>
