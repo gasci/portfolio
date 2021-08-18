@@ -1081,11 +1081,11 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Added scripts -->
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
     <script>
         $(window).scroll(function () {
             // console.log($(this).scrollTop())
-            if ($(this).scrollTop() < 50) {
+            if ($(this).scrollTop() < 100) {
                 $(".floating-button-top").removeClass("d-none");
             } else {
                 $(".floating-button-top").addClass("d-none");
@@ -1100,6 +1100,40 @@
 
         $(".navbar-toggler").click(function () {
             $("#bars-icon, #times-icon").toggleClass("d-none");
+        });
+
+        // Smooth scrolling using jQuery easing
+        $('a.js-scroll-trigger[href*="#"]:not([href="#"]), .floating-button').click(function () {
+            if (
+                location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+                location.hostname == this.hostname
+            ) {
+                var target = $(this.hash);
+                target = target.length
+                    ? target
+                    : $("[name=" + this.hash.slice(1) + "]");
+                if (target.length) {
+                    $("html, body").animate(
+                        {
+                            scrollTop: target.offset().top,
+                        },
+                        750,
+                        "easeInOutExpo"
+                    );
+                    return false;
+                }
+            }
+        });
+
+        // Closes responsive menu when a scroll trigger link is clicked
+        $(".js-scroll-trigger").click(function () {
+            $(".navbar-collapse").collapse("hide");
+        });
+
+        // Activate scrollspy to add active class to navbar items on scroll
+        $("body").scrollspy({
+            target: "#sideNav",
         });
     </script>
 </body>
