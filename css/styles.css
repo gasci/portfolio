@@ -85,6 +85,37 @@
     color: #f39c12;
 }
 
+.floating-button {
+    position:fixed;
+	width:45px;
+	height:45px;
+    border-radius:50px;
+    color: black !important;
+	text-align:center;
+	box-shadow: 1px 1px 2px black;
+    animation: MoveUpDown 0.75s linear infinite;
+    bottom:20px;
+	right:20px;
+    z-index: 9999;
+    opacity: 0.9;
+}
+
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 20;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+
 
 /* Third Party end */
 
@@ -3213,7 +3244,7 @@ input[type=button].btn-block {
     position: relative;
     height: 0;
     overflow: hidden;
-    transition: height 0.35s ease;
+    transition: height 0.10s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,16 +1,29 @@
-/*!
-    * Start Bootstrap - Resume v6.0.2 (https://startbootstrap.com/theme/resume)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-    */
-    (function ($) {
-    "use strict"; // Start of use strict
+(function ($) {
+
+    $(".navbar-toggler").click(function () {
+        $("#bars-icon, #times-icon").toggleClass("d-none");
+    });
+
+    $(window).scroll(function () {
+        // console.log($(this).scrollTop())
+        if ($(this).scrollTop() < 50) {
+            $(".floating-button-top").removeClass("d-none");
+        } else {
+            $(".floating-button-top").addClass("d-none");
+        }
+
+        if ($(window).scrollTop() + $(window).height() > $(document).height() - 1500) {
+            $(".floating-button-bottom").removeClass("d-none");
+        } else {
+            $(".floating-button-bottom").addClass("d-none");
+        }
+    });
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"]), .floating-button').click(function () {
         if (
             location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
+            this.pathname.replace(/^\//, "") &&
             location.hostname == this.hostname
         ) {
             var target = $(this.hash);
@@ -22,7 +35,7 @@
                     {
                         scrollTop: target.offset().top,
                     },
-                    1000,
+                    750,
                     "easeInOutExpo"
                 );
                 return false;
@@ -39,4 +52,5 @@
     $("body").scrollspy({
         target: "#sideNav",
     });
+
 })(jQuery); // End of use strict
