@@ -1,24 +1,5 @@
 (function ($) {
 
-    $(".navbar-toggler").click(function () {
-        $("#bars-icon, #times-icon").toggleClass("d-none");
-    });
-
-    $(window).scroll(function () {
-        // console.log($(this).scrollTop())
-        if ($(this).scrollTop() < 50) {
-            $(".floating-button-top").removeClass("d-none");
-        } else {
-            $(".floating-button-top").addClass("d-none");
-        }
-
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 1500) {
-            $(".floating-button-bottom").removeClass("d-none");
-        } else {
-            $(".floating-button-bottom").addClass("d-none");
-        }
-    });
-
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"]), .floating-button').click(function () {
         if (

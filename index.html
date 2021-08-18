@@ -40,6 +40,39 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .floating-button {
+            position: fixed;
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            color: black !important;
+            text-align: center;
+            box-shadow: 1px 1px 2px black;
+            animation: MoveUpDown 0.75s linear infinite;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            opacity: 0.9;
+        }
+
+
+        @keyframes MoveUpDown {
+
+            0%,
+            100% {
+                bottom: 20;
+            }
+
+            50% {
+                bottom: 30px;
+            }
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -1032,7 +1065,8 @@
     <footer class="footer">
         <div class="container p-3">
             <div class="text-center center-block">
-                <div class="text-muted mb-2">&copy; 2021 &#183; Made by Göktuğ Aşcı with <i class="text-danger fas fa-heart"></i></div>
+                <div class="text-muted mb-2">&copy; 2021 &#183; Made by Göktuğ Aşcı with <i
+                        class="text-danger fas fa-heart"></i></div>
                 <a class="" href="mailto:drgoktugasci@gmail.com"><i
                         class="fas fa-2x fa-envelope social"></i></a>&nbsp;&nbsp;&nbsp;
                 <a class="" href="https://www.linkedin.com/in/gokasci/" target="_blank"><i
@@ -1048,6 +1082,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Added scripts -->
     <script src="js/scripts.js"></script>
+    <script>
+        $(window).scroll(function () {
+            // console.log($(this).scrollTop())
+            if ($(this).scrollTop() < 50) {
+                $(".floating-button-top").removeClass("d-none");
+            } else {
+                $(".floating-button-top").addClass("d-none");
+            }
+
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 1500) {
+                $(".floating-button-bottom").removeClass("d-none");
+            } else {
+                $(".floating-button-bottom").addClass("d-none");
+            }
+        });
+
+        $(".navbar-toggler").click(function () {
+            $("#bars-icon, #times-icon").toggleClass("d-none");
+        });
+    </script>
 </body>
 
 </html>
